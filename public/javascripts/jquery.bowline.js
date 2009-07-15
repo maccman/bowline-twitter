@@ -2,22 +2,23 @@
   var init = false;
   var TI = Titanium;
   var UI = TI.UI;
+  var mainWin = UI.mainWindow.window;
   
   $.bowline = {
     setup: function(name, el){
-      var rb = UI.mainWindow.eval("bowline_" + name + "_setup");
+      var rb = mainWin.eval("bowline_" + name + "_setup");
       if(!rb) throw 'Unknown class';
       rb(el);
     },
     
     klass: function(name){
-      var rb = UI.mainWindow.eval("bowline_" + name);
+      var rb = mainWin.eval("bowline_" + name);
       if(!rb) throw 'Unknown class';
       return rb;
     },
     
     instance: function(name, el){
-      var rb = UI.mainWindow.eval("bowline_" + name + "_instance");
+      var rb = mainWin.eval("bowline_" + name + "_instance");
       if(!rb) throw 'Unknown class';
       return rb(el);
     },
@@ -41,7 +42,7 @@
           $('head').append(script);
         }, 100);
     	});
-    }
+    },
     
     ready: function(func){
       if(init) return func();
@@ -49,20 +50,22 @@
     },
     
     dialog: function(name, options, callback){
+      if(!callback && typeof(options) == 'function') {
+        callback = options;
+        options  = {};
+      }
       $.extend(options, {
         'url': 'app://public/' + name + '.html',
         'height': 300,
         'width': 400,
-        'transparency': 0.8,
+        'transparency': 0.9,
         'resizable': false,
-        'usingChrome': false
+        'usingChrome': false,
+        'onclose': function(res){
+          if(callback) callback(res);
+        }
       });
-      var dialog = Titanium.UI.showDialog(options,
-  			"onclose": function(result){
-  			  if(callback) callback(result);
-  			}
-			}
-			return dialog;
+      return Titanium.UI.showDialog(options);
     },
     
     setupForms: function(){
@@ -137,7 +140,8 @@
     $(this).trigger('update.bowline');
 	};
 	
-	if(UI.mainWindow == UI.getCurrentWindow()){
+  // main window
+	if(UI.getCurrentWindow().isTopMost()){
 	  $.bowline.load();
 	}
 })(jQuery)

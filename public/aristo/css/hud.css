@@ -1,0 +1,24 @@
+body {
+  -webkit-user-drag:element;
+}
+
+body:-khtml-drag {
+  background: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+.hud {
+  -webkit-border-radius: 3px;
+  color: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ccc), color-stop(0.3, #000), color-stop(0.33, #000), to(#000));
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.hud .inner {
+  margin: 15px;
+}

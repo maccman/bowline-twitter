@@ -19,9 +19,11 @@
           tweets.invoke('update', $('#updateText').val());
           return false;
         });
+        
+        $.bowline.dialog('login', function(){
+          alert('return');
+        });
       });
-      
-      
     });
   </script>
 </head>
