@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="aristo/css/aristo.css" type="text/css" charset="utf-8">
+  <link rel="stylesheet" href="stylesheets/application.css" type="text/css" charset="utf-8">
+	<script src="javascripts/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+    jQuery(function($){
+      $('#submit').click(function(){
+        var currentWindow = Titanium.UI.currentWindow;
+    		currentWindow.close({
+    		  'username': $('#username').val(),
+    		  'password': $('#password').val()
+    		});
+  		});
+    });
+	</script>
+</head>
+<body>
+  <div class="hud">
+    <header>Twitter Login</header>
+  
+    <label for="username">Username</label>
+    <input type="text" name="username" value="" id="username">
+  
+    <label for="password">Password</label>
+    <input type="password" name="password" value="" id="password">
+  
+    <button id="submit">Login</button>
+  </div>
+</body>
+</html>

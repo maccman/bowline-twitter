@@ -1,0 +1,14 @@
+.DS_Store
+build/*
+log/*
+tmp/*
+TAGS
+*~
+.#*
+db/*.sqlite3
+db/*.sqlite
+db/*.db
+.hgignore
+.hg/*
+.svn/*
+vendor/

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Twitter</title>
+	<link rel="stylesheet" href="aristo/css/aristo.css" type="text/css" charset="utf-8">
+  <link rel="stylesheet" href="stylesheets/application.css" type="text/css" charset="utf-8">
+	<script src="javascripts/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="javascripts/jquery.chain.js" type="text/javascript" charset="utf-8"></script>
+  <script src="javascripts/jquery.bowline.js" type="text/javascript" charset="utf-8"></script>
+  <script src="javascripts/application.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8">
+    jQuery(function($){
+      $.bowline.ready(function(){
+        var tweets = $('#tweets').bowline('tweets');
+        tweets.invoke('index');
+
+        $('#updateSubmit').click(function(){
+          tweets.invoke('update', $('#updateText').val());
+          return false;
+        });
+      });
+      
+      
+    });
+  </script>
+</head>
+  <body>
+    <div id="tweets" class="main">
+      <div class="item">
+        <span class="text"></span>
+      </div>
+    </div>
+    
+    <footer>
+      <input placeholder="What are you doing?" type="text" id="updateText">
+      <button id="updateSubmit">Update</button>
+    </footer>
+</body>
+</html>
