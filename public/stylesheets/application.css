@@ -1,30 +1,11 @@
-body {
-  background: #D2D2D2;
-  padding: 0;
-  margin: 0;
-}
-
-footer {
-  display: block;
-  padding: 3px;
-  border-top: 1px solid #CDCDCD;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9C9C9C), to(#777777));
-  text-align: right;
-}
-
-nav {
-  display: block;
-  background: -webkit-gradient(linear, left top, left bottom, from(#272727), to(#121212));
+footer input["type='text'"] {
+  width: 50px;
 }
 
 .main {
   padding: 3px;
   max-height: 410px;
   overflow: auto;
-}
-
-footer input["type='text'"] {
-  width: 50px;
 }
 
 .item {

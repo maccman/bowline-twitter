@@ -56,8 +56,8 @@
       }
       $.extend(options, {
         'url': 'app://public/' + name + '.html',
-        'height': 300,
-        'width': 400,
+        'height': 200,
+        'width': 350,
         'transparency': 0.9,
         'resizable': false,
         'usingChrome': false,

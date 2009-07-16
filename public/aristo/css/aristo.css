@@ -10,6 +10,17 @@ http://trac.webkit.org/browser/trunk/LayoutTests//fast/css
   font-weight: bold;
 }
 
+body {
+  background: #F2F2F2;
+  padding: 0;
+  margin: 0;
+}
+
+input[type="text"], 
+input[type="password"] {
+  width: 180px;
+}
+
 input[type="checkbox"] {
   -khtml-appearance: none;
   background: url(../images/check-box-bezel.png) no-repeat;
@@ -48,14 +59,6 @@ button.default {
   -webkit-border-image: url(../images/default-button-bezel.png) 2 2 2 2 stretch stretch;
 }
 
-.hud button {
-  font-size: 11px;
-  color: #fff;
-  padding: 0;
-  -webkit-border-image: url(../images/hud/button-bezel.png) 9 13 10 13 / 8px 13px 9px 13px repeat repeat;
-  text-shadow: none;
-}
-
 button:hover:not(:disabled) {
   -webkit-box-shadow: 0 0 15px #D4D4D4;
 }
@@ -64,20 +67,12 @@ button.default:hover {
   -webkit-box-shadow: 0 0 15px #A1CAE2;
 }
 
-.hud button:hover {
-  -webkit-box-shadow: none;
-}
-
 button:active:not(:disabled) {
   -webkit-border-image: url(../images/button-bezel-highlighted.png) 2 2 2 2 stretch stretch;
 }
 
 button.default:active {
   -webkit-border-image: url(../images/default-button-bezel-highlighted.png) 2 2 2 2 stretch stretch;
-}
-
-.hud button:active {
-  -webkit-border-image: url(../images/hud/button-bezel-highlighted.png) 9 13 10 13 / 8px 13px 9px 13px repeat repeat;
 }
 
 button:disabled {
@@ -181,6 +176,20 @@ input, textarea {
   padding: 4px;
 }
 
+label {
+  text-align: right;
+  margin-right: 5px;
+  width: 94px;
+  display: block;
+  float: left;
+  line-height: 27px;
+}
+
+p.input {
+  clear: left;
+  position: relative;
+}
+
 ::-webkit-input-placeholder {
   color: #BDC7D3;
 }
@@ -193,14 +202,36 @@ input, textarea {
   cursor: progress;
 }
 
-/*header {
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+header {
   display: block;
-  height: 30px;
-  width: 300px;
   padding: 10px;
   text-align: center;
   border-bottom: 2px solid #979797;
   background: -webkit-gradient(linear, left top, left bottom, from(#EAEAEA), to(#C2C2C2));
   text-shadow: 0px 1px 1px #fff;
   color: #2C2C2C;
-}*/
+}
+
+footer {
+  display: block;
+  padding: 3px;
+  border-top: 1px solid #CDCDCD;
+  background: -webkit-gradient(linear, left top, left bottom, from(#E2E2E2), to(#C7C7C7));
+  text-align: right;
+  clear: both;
+  overflow: hidden;
+}
+
+nav {
+  display: block;
+  background: #D4DDE6;
+  border-right: 1px solid #A5A5A5;
+}

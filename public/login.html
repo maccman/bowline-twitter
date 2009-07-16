@@ -17,18 +17,27 @@
   		});
     });
 	</script>
+	<title>Login</title>
 </head>
 <body>
-  <div class="hud">
-    <header>Twitter Login</header>
+  <div class="inner">
+    Enter your Twitter credentials to login.
   
-    <label for="username">Username</label>
-    <input type="text" name="username" value="" id="username">
-  
-    <label for="password">Password</label>
-    <input type="password" name="password" value="" id="password">
-  
-    <button id="submit">Login</button>
+    <p class="input">
+      <label for="username">username:</label>
+      <input type="text" name="username" value="" id="username">
+    </p>
+
+    <p class="input">
+      <label for="password">password:</label>
+      <input type="password" name="password" value="" id="password">
+    </p>
   </div>
+
+  <footer>
+    <span class="right">
+      <button id="submit">Login</button>
+    </span>
+  </footer>
 </body>
 </html>

@@ -1,24 +1,69 @@
-body {
+.hud {
   -webkit-user-drag:element;
 }
 
-body:-khtml-drag {
-  background: none;
-}
+.hud:-khtml-drag {
+  visibility: hidden;
+}  
 
 html, body {
   height: 100%;
+  border: 0;
+  background-color: transparent;
+}
+
+footer {
+  display: block;
+  border: none;
+  background: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .hud {
-  -webkit-border-radius: 3px;
   color: #fff;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ccc), color-stop(0.3, #000), color-stop(0.33, #000), to(#000));
-  height: 100%;
-  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4D4D4D), color-stop(0.3, #000000), color-stop(0.3, #000000), to(#000000));
+  border: 1px solid #060606;
+  -webkit-border-radius: 3px;
   text-align: center;
 }
 
+.hud .border {
+  border: 1px solid #4F4F4F;
+  -webkit-border-radius: 3px;
+}
+
 .hud .inner {
-  margin: 15px;
+  margin: 8px 15px;
+  position: relative;
+}
+
+.hud button {
+  font-size: 11px;
+  color: #fff;
+  -webkit-border-image: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(#474747), to(#000000));
+  border: 1px solid #000;
+  -webkit-box-shadow: 0 0 2px #fff;
+  -webkit-border-radius: 10px;
+  padding: 0px 16px;
+  text-shadow: 0px 1px 1px #1D1D1D;
+}
+
+.hud button:hover {
+  -webkit-box-shadow: 0 0 3px #fff;
+}
+
+.hud button:active {
+  -webkit-border-image: none;
+  background: -webkit-gradient(linear, left bottom, left top, from(#474747), to(#000000));
+}
+
+.title {
+  text-shadow: 0px 1px 2px #1D1D1D;
+  color: #EFEFEF;
+  font-size: 11px;
+  text-align: center;
+  margin: 3px;
 }

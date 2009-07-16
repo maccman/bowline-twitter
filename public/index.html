@@ -13,7 +13,7 @@
     jQuery(function($){
       $.bowline.ready(function(){
         var tweets = $('#tweets').bowline('tweets');
-        tweets.invoke('index');
+        // tweets.invoke('index');
 
         $('#updateSubmit').click(function(){
           tweets.invoke('update', $('#updateText').val());
