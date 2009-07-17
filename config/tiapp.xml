@@ -1,24 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ti:app xmlns:ti="http://ti.appcelerator.org" xmlns:appc="http://www.appcelerator.org">
-   <id>bowline.twitter</id>
-   <name>twitter</name>
-   <version>0.1</version>
-   <window>
-      <id>initial</id>
-      <title>Bowline</title>
-      <url>app://public/index.html</url>
-      <width>750</width>
-      <height>800</height>
-      <fullscreen>false</fullscreen>
-      <!--
-      <minimizable>true</minimizable>
-      <maximizable>false</maximizable>
-      <max-width>900</max-width>
-      <max-height>800</max-height>
-      <min-width>400</min-width>
-      <min-height>300</min-height>
-      -->
-      <closeable>true</closeable>
-      <chrome>true</chrome>
-   </window>
+<?xml version='1.0' encoding='UTF-8'?>
+<ti:app xmlns:ti='http://ti.appcelerator.org'>
+  <id>com.twitter</id>
+  <name>Twitter</name>
+  <version>0.1.0</version>
+  <publisher>Example</publisher>
+  <url>http://example.com</url>
+  <icon>public/icon.png</icon>
+  <copyright>Copyright © 2009</copyright>
+  <window>
+    <id>initial</id>
+    <title>Twitter</title>
+    <url>app://public/index.html</url>
+    <width>450</width>
+    <height>460</height>
+    <fullscreen>false</fullscreen>
+    <resizable>false</resizable>
+    <chrome scrollbars="true">true</chrome>
+    <maximizable>true</maximizable>
+    <minimizable>true</minimizable>
+    <closeable>true</closeable>
+  </window>
 </ti:app>

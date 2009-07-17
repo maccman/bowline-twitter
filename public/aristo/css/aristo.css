@@ -194,14 +194,6 @@ p.input {
   color: #BDC7D3;
 }
 
-.copy {
-  cursor: copy;
-}
-
-.progress {
-  cursor: progress;
-}
-
 .right {
   float: right;
 }

@@ -3,18 +3,34 @@ footer input["type='text'"] {
 }
 
 .main {
-  padding: 3px;
-  max-height: 410px;
+  height: 416px;
   overflow: auto;
 }
 
 .item {
-  background: #F2F2F2;
-  border: 1px solid #808080;
   padding: 8px;
-  -webkit-border-radius: 5px;
   font-size: 16px;
-  margin-bottom: 8px;
+  overflow: hidden;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transition: background 0.4s linear;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), color-stop(0.5, #F5F5F5), color-stop(0.5, #EBEBEB), to(#EBEBEB));
+}
+
+.item:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#E8EAEB), color-stop(0.5, #E8EAEB), color-stop(0.5, #E0E2E3), to(#E0E2E3));
+}
+
+.item img {
+  float: left;
+  margin-right: 10px;
+  width: 48px;
+  height: 48px;
+}
+
+.loading {
+  cursor: progress;
+  background: url(/public/loading.gif) no-repeat 50% 50%;
 }
 
 button {

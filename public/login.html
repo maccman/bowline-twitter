@@ -6,9 +6,10 @@
   <link rel="stylesheet" href="stylesheets/application.css" type="text/css" charset="utf-8">
 	<script src="javascripts/jquery.js" type="text/javascript" charset="utf-8"></script>
   <script src="javascripts/hud.js" type="text/javascript" charset="utf-8"></script>
+  <script src="javascripts/application.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript" charset="utf-8">
     jQuery(function($){
-      $('#submit').click(function(){
+      $('#login').submit(function(){
         var currentWindow = Titanium.UI.currentWindow;
     		currentWindow.close({
     		  'username': $('#username').val(),
@@ -20,24 +21,26 @@
 	<title>Login</title>
 </head>
 <body>
-  <div class="inner">
-    Enter your Twitter credentials to login.
+  <form id="login" class="select">
+    <div class="inner">
+      <h2>Enter your Twitter credentials to login.</h2>
   
-    <p class="input">
-      <label for="username">username:</label>
-      <input type="text" name="username" value="" id="username">
-    </p>
+      <p class="input">
+        <label for="username">username:</label>
+        <input type="text" name="username" value="" id="username">
+      </p>
 
-    <p class="input">
-      <label for="password">password:</label>
-      <input type="password" name="password" value="" id="password">
-    </p>
-  </div>
+      <p class="input">
+        <label for="password">password:</label>
+        <input type="password" name="password" value="" id="password">
+      </p>
+    </div>
 
-  <footer>
-    <span class="right">
-      <button id="submit">Login</button>
-    </span>
-  </footer>
+    <footer>
+      <span class="right">
+        <button>Login</button>
+      </span>
+    </footer>
+  </form>
 </body>
 </html>

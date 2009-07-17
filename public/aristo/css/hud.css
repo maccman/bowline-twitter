@@ -4,21 +4,19 @@
 
 .hud:-khtml-drag {
   visibility: hidden;
-}  
+}
 
-html, body {
-  height: 100%;
-  border: 0;
-  background-color: transparent;
+body {
+  /* Titanium Bug - Background color is showing */
+  background: rgba(255, 255, 255, 0) !important;
 }
 
 footer {
   display: block;
   border: none;
   background: none;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  padding: 3px 10px 8px;
+  margin-top: 14px;
 }
 
 .hud {
@@ -27,6 +25,7 @@ footer {
   border: 1px solid #060606;
   -webkit-border-radius: 3px;
   text-align: center;
+  font-size: 14px;
 }
 
 .hud .border {
@@ -49,6 +48,8 @@ footer {
   -webkit-border-radius: 10px;
   padding: 0px 16px;
   text-shadow: 0px 1px 1px #1D1D1D;
+  min-width: 31px;
+  min-height: 17px;
 }
 
 .hud button:hover {
@@ -58,6 +59,15 @@ footer {
 .hud button:active {
   -webkit-border-image: none;
   background: -webkit-gradient(linear, left bottom, left top, from(#474747), to(#000000));
+}
+
+.hud h2 {
+  font-size: 14px;
+  margin: 11px 0px 17px;
+}
+
+.hud p.input {
+  margin: 7px 0px;
 }
 
 .title {

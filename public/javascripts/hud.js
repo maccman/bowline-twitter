@@ -1,6 +1,8 @@
 jQuery(function($){
   $(document.body).each(function(){
     var element = $(this)[0];
+    var currentWindow = Titanium.UI.currentWindow;
+    
     element.ondragstart = function(e){
       // e.dataTransfer.effectAllowed = "none";
     };
@@ -17,14 +19,13 @@ jQuery(function($){
       var x = e.screenX;
       var y = e.screenY - $(window).height();
       
-      var currentWindow = Titanium.UI.currentWindow;
       currentWindow.setX(x);
       currentWindow.setY(y);
     };
     
     $(this).wrapInner($("<div class='hud'></div>"));
     var hud = $(this).find('.hud');
-    
+        
     // You can use multiple colors in a border 
     // - so this is one way round it
     hud.wrapInner($("<div class='border'></div>"));
@@ -33,8 +34,9 @@ jQuery(function($){
     var title = $("<div class='title'></div>");
     title.text(document.title);
     border.prepend(title);
+
+    currentWindow.setHeight(hud.outerHeight());
     
-    hud.height($(window).height() - 2);
     border.height(hud.height() - 2);
   });
 });

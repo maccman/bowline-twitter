@@ -9,7 +9,7 @@ Bowline::Initializer.run do |config|
   config.url        = "http://example.com"
   
   config.gem "twitter"
-  
+
   # config.gem "net-mdns", :lib => 'net/dns/mdns'
   # config.gem "rack"
   # config.gem "rubyzip", :lib => 'zip/zip'

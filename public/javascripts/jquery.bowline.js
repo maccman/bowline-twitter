@@ -120,7 +120,16 @@
         var name = $(this).item('root').data('bowline');
         var func = $.bowline.instance(name, $(this));
       }
-      return func.apply(func, arguments);
+      var args = $.makeArray(arguments);
+      var opts = args.pop();
+      if(typeof(opts) == "object" && opts.async){
+        setTimeout(function(){
+          func.apply(func, args);
+        }, 100);
+      } else {
+        args.push(opts);
+        func.apply(func, args);
+      }
     } else {
       throw 'Chain not active';
     }

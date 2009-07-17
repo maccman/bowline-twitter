@@ -11,26 +11,43 @@
   <script src="javascripts/application.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8">
     jQuery(function($){
-      $.bowline.ready(function(){
-        var tweets = $('#tweets').bowline('tweets');
-        // tweets.invoke('index');
+      var tweets = $('#tweets');
+      tweets.hide();
+      
+      $(".main").loading(true);
+      
+      $.bowline.ready(function(){        
+        tweets.bowline('tweets');
 
         $('#updateSubmit').click(function(){
-          tweets.invoke('update', $('#updateText').val());
+          tweets.invoke('update', $('#updateText').val(), {async:true});
+          $('#updateText').val('');
           return false;
         });
         
-        $.bowline.dialog('login', function(){
-          alert('return');
+        tweets.bind('loading', function(e, toggle){
+          $(".main").loading(toggle);
+        });
+        
+        tweets.update(function(e, data){
+          $(this).show();
+        });
+        
+        $.bowline.dialog('login', function(res){
+          tweets.invoke('login', res.username, res.password);
+          tweets.invoke('index', {async:true});
         });
       });
     });
   </script>
 </head>
   <body>
-    <div id="tweets" class="main">
-      <div class="item">
-        <span class="text"></span>
+    <div class="main">
+      <div id="tweets">
+        <div class="item">
+          <img class="profile_image_url">
+          <span class="text"></span>
+        </div>
       </div>
     </div>
     
