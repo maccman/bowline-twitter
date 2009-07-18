@@ -13,8 +13,9 @@ footer input["type='text'"] {
   overflow: hidden;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
+  /* Needs a alpha element for transition to work: http://screenflicker.com/mike/code/more-webkit-transition-funniness/ */
   -webkit-transition: background 0.4s linear;
-  background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), color-stop(0.5, #F5F5F5), color-stop(0.5, #EBEBEB), to(#EBEBEB));
+  background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), color-stop(0.5, #F5F5F5), color-stop(0.5, #EBEBEB) to(#EBEBEB));
 }
 
 .item:hover {

@@ -1,3 +1,8 @@
+// Titanium HUD JS
+// Under the same license as Bowline
+//  http://appcelerator.com
+//  http://github.com/maccman/bowline
+
 jQuery(function($){
   $(document.body).each(function(){
     var element = $(this)[0];

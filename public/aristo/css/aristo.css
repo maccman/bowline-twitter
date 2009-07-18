@@ -60,7 +60,7 @@ button.default {
 }
 
 button:hover:not(:disabled) {
-  -webkit-box-shadow: 0 0 15px #D4D4D4;
+  -webkit-box-shadow: 0 0 5px #A4A4A4;
 }
 
 button.default:hover {

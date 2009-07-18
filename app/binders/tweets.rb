@@ -2,13 +2,15 @@ module Binders
   class Tweets < Bowline::Binders::Collection
     class << self
       def index
-        trigger(:loading, true)
-        self.items = timeline
-        trigger(:loading, false)
+        loading {
+          self.items = timeline
+        }
       end
       
       def update(status)
-        twitter.update(status)
+        loading {
+          twitter.update(status)
+        }
         index # update timeline
       end
       
