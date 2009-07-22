@@ -68,6 +68,7 @@ button.default:hover {
 }
 
 button:active:not(:disabled) {
+  -webkit-box-shadow: none;
   -webkit-border-image: url(../images/button-bezel-highlighted.png) 2 2 2 2 stretch stretch;
 }
 

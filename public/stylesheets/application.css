@@ -29,6 +29,10 @@ footer input["type='text'"] {
   height: 48px;
 }
 
+.item span {
+  -webkit-user-select: text;
+}
+
 .loading {
   cursor: progress;
   background: url(/public/loading.gif) no-repeat 50% 50%;
