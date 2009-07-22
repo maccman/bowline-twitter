@@ -1,3 +1,8 @@
+a, h1, h2, h3, h4, blockquote
+{
+	-webkit-user-select: none;
+}
+
 .hud {
   color: #fff;
   background: -webkit-gradient(linear, left top, left bottom, from(#4D4D4D), color-stop(0.3, #000000), color-stop(0.3, #000000), to(#000000));
