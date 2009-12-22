@@ -12,3 +12,4 @@ db/*.db
 .hg/*
 .svn/*
 vendor/
+config/application.yml
