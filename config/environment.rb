@@ -7,6 +7,7 @@ Bowline::Initializer.run do |config|
   config.version    = "0.1.0"
   config.publisher  = "Example"
   config.url        = "http://example.com"
+  config.icon       = "public/icon.png"
   
   config.gem "twitter"
   config.gem "newgem", ">= 1.2.3"

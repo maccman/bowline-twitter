@@ -1,9 +1,7 @@
 jQuery(function($){
-  $('.select input:first').select();
+  $("#tweets").update(function(){
+    $(this).attr({
+      scrollTop: $(this).attr("scrollHeight")
+    });
+  });
 });
-
-(function($){
-  $.fn.loading = function(toggle){
-    $(this).toggleClass('loading', toggle);
-  };
-}(jQuery));

@@ -7,36 +7,23 @@
   <link rel="stylesheet" href="stylesheets/application.css" type="text/css" charset="utf-8">
 	<script src="javascripts/jquery.js" type="text/javascript" charset="utf-8"></script>
 	<script src="javascripts/jquery.chain.js" type="text/javascript" charset="utf-8"></script>
-  <script src="javascripts/jquery.bowline.js" type="text/javascript" charset="utf-8"></script>
+	<script src="javascripts/json2.js" type="text/javascript" charset="utf-8"></script>
+  <script src="javascripts/bowline.js" type="text/javascript" charset="utf-8"></script>
   <script src="javascripts/application.js" type="text/javascript" charset="utf-8"></script>
-  <script type="text/javascript" charset="utf-8">
+  <script type="text/javascript" charset="utf-8">    
     jQuery(function($){
       var tweets = $('#tweets');
-      tweets.hide();
-      
-      $(".main").loading(true);
-      
-      $.bowline.ready(function(){        
-        tweets.bowline('tweets');
+        
+      tweets.bindto('TweetsBinder');
 
-        $('#updateSubmit').click(function(){
-          tweets.invoke('update', $('#updateText').val(), {async:true});
-          $('#updateText').val('');
-          return false;
-        });
-        
-        tweets.bind('loading', function(e, toggle){
-          $(".main").loading(toggle);
-        });
-        
-        tweets.update(function(e, data){
-          $(this).show();
-        });
-        
-        $.bowline.dialog('login', function(res){
-          tweets.invoke('login', res.username, res.password);
-          tweets.invoke('index', {async:true});
-        });
+      $('#updateSubmit').click(function(){
+        tweets.invoke('update', $('#updateText').val());
+        $('#updateText').val('');
+        return false;
+      });
+      
+      tweets.bind('loading', function(e, toggle){
+        $(".main").loading(toggle);
       });
     });
   </script>
