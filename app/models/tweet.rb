@@ -1,8 +1,10 @@
-class Tweet < Bowline::LocalModel  
+class Tweet < SuperModel::Base
   class << self
     def poll
       destroy_all
-      populate(timeline)
+      timeline.each do |tweet|
+        create(tweet)
+      end
     end
     
     def update(status)

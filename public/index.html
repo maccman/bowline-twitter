@@ -12,18 +12,15 @@
   <script src="javascripts/application.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8">    
     jQuery(function($){
+      Bowline.trace = true;
+      
       var tweets = $('#tweets');
-        
-      tweets.bindto('TweetsBinder');
+      tweets.bowlineBind('TweetsBinder');
 
       $('#updateSubmit').click(function(){
         tweets.invoke('update', $('#updateText').val());
         $('#updateText').val('');
         return false;
-      });
-      
-      tweets.bind('loading', function(e, toggle){
-        $(".main").loading(toggle);
       });
     });
   </script>

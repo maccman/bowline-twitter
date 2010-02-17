@@ -8,13 +8,4 @@ Bowline::Initializer.run do |config|
   config.publisher  = "Example"
   config.url        = "http://example.com"
   config.icon       = "public/icon.png"
-  
-  config.gem "twitter"
-  config.gem "newgem", ">= 1.2.3"
-
-  # config.gem "net-mdns", :lib => 'net/dns/mdns'
-  # config.gem "rack"
-  # config.gem "rubyzip", :lib => 'zip/zip'
-  # Bowline Edge:
-  # config.gem "maccman-bowline", :lib => "bowline", :source => "http://gems.github.com"
 end

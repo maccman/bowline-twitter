@@ -13,3 +13,4 @@ db/*.db
 .svn/*
 vendor/
 config/application.yml
+bin
