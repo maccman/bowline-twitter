@@ -5,7 +5,7 @@ http://github.com/maccman/bowline
 
 Released under the same license as Bowline (MIT)
 
-OSX only at the moment.
+OSX and ubuntu at the moment.
 
 Setup:
   1) Install gem
