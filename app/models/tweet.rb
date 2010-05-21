@@ -22,6 +22,8 @@ class Tweet < SuperModel::Base
       end
 
       def twitter
+        puts AppConfig.username
+        puts AppConfig.password
         httpauth = Twitter::HTTPAuth.new(
           AppConfig.username, 
           AppConfig.password

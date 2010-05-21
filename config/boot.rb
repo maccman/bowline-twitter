@@ -6,11 +6,6 @@ require "rubygems"
 environment = File.expand_path("../../vendor/gems/environment", __FILE__)
 if File.exist?("#{environment}.rb")
   require environment
-
-# Use RubyGems
-else  
-  require "bundler"
-  Bundler.setup
 end
 
 require "bowline"
