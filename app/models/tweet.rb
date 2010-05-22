@@ -1,3 +1,5 @@
+require "twitter"
+
 class Tweet < SuperModel::Base
   class << self
     def poll
@@ -22,8 +24,6 @@ class Tweet < SuperModel::Base
       end
 
       def twitter
-        puts AppConfig.username
-        puts AppConfig.password
         httpauth = Twitter::HTTPAuth.new(
           AppConfig.username, 
           AppConfig.password
