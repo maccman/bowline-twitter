@@ -2,7 +2,7 @@
 source 'http://rubygems.org'
 
 gem "bowline"
-
+gem "tzinfo"
 gem "twitter"
 
 ## Bundle the gems you use:
